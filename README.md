@@ -27,10 +27,6 @@
 
 1. Клонировать репозиторий
 
-```bash
-git clone https://github.com/твой-ник/weather-app.git
-cd weather-app
-
 2. Установить зависимости
 pip install -r requirements.txt
 

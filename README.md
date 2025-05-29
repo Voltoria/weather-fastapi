@@ -31,10 +31,10 @@
 pip install -r requirements.txt
 
 3. Получить API-ключ
-Зарегистрироваться на openweathermap.org
-Перейти в API Keys
-Создать новый ключ
-Добавить в файл .env в корень проекта:
+- Зарегистрироваться на openweathermap.org
+- Перейти в API Keys
+- Создать новый ключ
+- Добавить в файл .env в корень проекта:
 OPENWEATHER_API_KEY=ваш_ключ
 
 5. Запустить сервер
@@ -46,5 +46,5 @@ http://127.0.0.1:8000
 -------
 
 Как запустить тестрование
-pytest или python -m pytest [...]
+- pytest или python -m pytest [...]
 

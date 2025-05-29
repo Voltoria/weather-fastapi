@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Прогноз погоды на 5 дней</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Прогноз погоды</h1>
+
+    <form method="post">
+        <input type="text" name="city" id="city" placeholder="Введите город..." autocomplete="off">
+        <div id="suggestions" class="suggestions"></div>
+        <button type="submit">Узнать погоду</button>
+    </form>
+    <script src="/static/autocomplete.js"></script>
+   
+    {% if forecast %}
+        <div class="result">
+            <h2>Прогноз на 5 дней для {{ city }}</h2>
+            {% for day in forecast %}
+                <div class="day">
+                    <h3>{{ day['дата'] }}</h3>
+                    <p>Температура: {{ day['температура'] }}</p>
+                    <p>Погода: {{ day['погода'] }}</p>
+                    <p>Ветер: {{ day['ветер'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% elif error %}
+        <div class="error">
+            <p>Ошибка: {{ error }}</p>
+        </div>
+    {% endif %}
+
+    
+</body>
+</html>
